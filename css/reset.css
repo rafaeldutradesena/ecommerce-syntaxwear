@@ -1,4 +1,4 @@
-/* Reset CSS baseado no Andy Bell */
+/* Reset CSS baseado no reset do Andy Bell */
 
 /* Box sizing rules */
 *,
@@ -19,12 +19,11 @@ p,
 figure,
 blockquote,
 dl,
-dl,
-ul {
+dd {
   margin: 0;
 }
 
-/* Remove list styles on ul, ol elements with a list role */
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
 ol[role='list'] {
   list-style: none;
@@ -42,15 +41,17 @@ body {
   line-height: 1.5;
 }
 
-/* Remove default padding */
-ul,
-ol {
-  padding: 0;
-}
-
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
+}
+
+a{
+  text-decoration: none;
+}
+
+ul,ol{
+  list-style: none;
 }
 
 /* Make images easier to work with */
@@ -68,7 +69,7 @@ select {
   font: inherit;
 }
 
-/* Remove all animations and transitions for people that prefer not to see them */
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
     scroll-behavior: auto;
